@@ -1,9 +1,18 @@
-const getGoals = (req,res) => {res.json({message:'get -- goal'})}
+const asyncHandler = require('express-async-handler')
 
-const setGoals = (req,res) => {res.json({message:'set -- goal'})}
+const getGoals = asyncHandler(async(req,res) => {res.json({message:'get -- goal'})})
 
-const updateGoals = (req,res) => {res.json({message:`update -- ${req.params.id}`})}
+const setGoals = asyncHandler(async(req,res) => {
 
-const deleteGoals = (req,res) => {res.json({message:`delete -- ${req.params.id}`})}
+    if(!req.body.text){
+        res.status(400)
+        throw new Error('please enter text')
+    }
+    res.json({message:'set -- goal'})
+})
+
+const updateGoals = asyncHandler(async(req,res) => {res.json({message:`update -- ${req.params.id}`})})
+
+const deleteGoals = asyncHandler(async(req,res) => {res.json({message:`delete -- ${req.params.id}`})})
 
 module.exports = {getGoals , setGoals , updateGoals , deleteGoals }
