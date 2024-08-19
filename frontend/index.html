@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MERN CRUD App</title>
+</head>
+<body>
+    <h1>MERN CRUD App</h1>
+    
+    <div>
+        <h2>Create Goal</h2>
+        <form id="create-goal-form">
+            <input type="number" id="goal-id" placeholder="ID" required>
+            <input type="text" id="goal-name" placeholder="Name" required>
+            <input type="text" id="goal-department" placeholder="Department" required>
+            <input type="text" id="goal-organisation" placeholder="Organisation" required>
+            <button type="submit">Create Goal</button>
+        </form>
+    </div>
+    
+    <div>
+        <h2>Update Goal</h2>
+        <form id="update-goal-form">
+            <input type="number" id="update-id" placeholder="ID" required>
+            <input type="text" id="update-name" placeholder="Name">
+            <input type="text" id="update-department" placeholder="Department">
+            <input type="text" id="update-organisation" placeholder="Organisation">
+            <button type="submit">Update Goal</button>
+        </form>
+    </div>
+
+    <div>
+        <h2>Delete Goal</h2>
+        <form id="delete-goal-form">
+            <input type="number" id="delete-id" placeholder="ID" required>
+            <button type="submit">Delete Goal</button>
+        </form>
+    </div>
+
+    <div>
+        <h2>List Goals</h2>
+        <button id="list-goals-button">List Goals</button>
+        <ul id="goals-list"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
