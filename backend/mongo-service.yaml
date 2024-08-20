@@ -3,15 +3,15 @@ kind: Service
 metadata:
   creationTimestamp: null
   labels:
-    app: frontend
-  name: frontend
+    app: mongo
+  name: mongo
 spec:
   ports:
-  - port: 3000
+  - port: 27017
     protocol: TCP
-    targetPort: 3000
+    targetPort: 27017
   selector:
-    app: frontend
+    app: mongo
   type: NodePort
 status:
   loadBalancer: {}
